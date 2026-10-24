@@ -1,0 +1,408 @@
+:root {
+  --main-radius: 5px;
+  --main-padding: 5px;
+  --navy: #4069db;
+  --darkNavy: #1e3a8a;
+  --royalBlue: #2563eb;
+  --iceBlue: #f1f5ff;
+  --steelBlue: #b1c5eb;
+}
+
+body {
+  background-color: var(--steelBlue);
+  font-family:
+    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+    Arial, sans-serif;
+}
+
+.container {
+  color: var(--iceBlue);
+
+  height: 100vh;
+  display: grid;
+
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 1fr 1fr 1fr 0.2fr;
+  gap: 1rem;
+
+  grid-template-areas:
+    "nav nav nav"
+    "firstBlock firstBlock firstBlock"
+    "secondBlock secondBlock secondBlock"
+    "thirdBlock thirdBlock thirdBlock"
+    "fourthBlock fourthBlock fourthBlock"
+    "footer footer footer";
+}
+
+nav {
+  grid-area: nav;
+  display: flex;
+  align-items: center;
+
+  background-color: var(--royalBlue);
+  border-radius: var(--main-radius);
+  padding: var(--main-padding);
+}
+
+nav img {
+  margin: 10px;
+  width: 70px;
+  display: block;
+}
+
+.navLinks {
+  display: flex;
+  flex: 1;
+  margin: 10px;
+  justify-content: space-between;
+}
+
+.navLinks a {
+  text-decoration: none;
+  color: var(--iceBlue);
+
+  padding: 10px;
+  background-color: var(--darkNavy);
+  border-radius: var(--main-radius);
+}
+
+.firstBlock {
+  grid-area: firstBlock;
+  display: flex;
+
+  background-color: var(--royalBlue);
+  border-radius: var(--main-radius);
+  padding: var(--main-padding);
+}
+
+.first {
+  text-align: center;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  background-color: var(--navy);
+}
+
+#about {
+  flex: 1;
+  background-color: var(--steelBlue);
+  color: var(--navy);
+  border: 2px solid var(--navy);
+  border-radius: var(--main-radius);
+  padding: 10px;
+  margin: 10px;
+}
+
+#about p {
+  line-height: 1.6;
+}
+
+#skills {
+  flex: 1;
+  background-color: var(--steelBlue);
+  color: var(--navy);
+  border: 2px solid var(--navy);
+  border-radius: var(--main-radius);
+  padding: 10px;
+  margin: 10px;
+}
+
+#experiences {
+  flex: 1;
+}
+
+.first img {
+  /* makes the imgs in the first block balanced */
+  display: block;
+  width: 40%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+
+.first p {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  text-align: justify;
+}
+
+ul {
+  text-align: left;
+}
+
+.secondBlock {
+  grid-area: secondBlock;
+  display: flex;
+
+  background-color: var(--royalBlue);
+  border-radius: var(--main-radius);
+  padding: var(--main-padding);
+}
+
+.second {
+  text-align: center;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--navy);
+}
+
+#experiences {
+  display: flex;
+}
+
+.experience {
+  flex: 1;
+  background-color: var(--steelBlue);
+  color: var(--navy);
+  border: 2px solid var(--navy);
+  border-radius: var(--main-radius);
+  padding: 10px;
+  margin: 10px;
+}
+
+.experience h4 {
+  text-decoration: underline;
+}
+
+.experience img {
+  display: block;
+  width: 60%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+
+.thirdBlock {
+  grid-area: thirdBlock;
+  display: flex;
+
+  background-color: var(--royalBlue);
+  border-radius: var(--main-radius);
+  padding: var(--main-padding);
+}
+
+.third {
+  text-align: center;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--navy);
+}
+
+#projects {
+  display: flex;
+}
+
+.project {
+  flex: 1;
+  margin-left: 20px;
+  margin-right: 20px;
+  background-color: var(--steelBlue);
+  color: var(--navy);
+  border: 2px solid var(--navy);
+  border-radius: var(--main-radius);
+  padding: 10px;
+  margin: 10px;
+}
+
+.project img {
+  display: block;
+  width: 60%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+
+.project h2 {
+  text-decoration: underline;
+  text-align: left;
+  width: 60%;
+  margin: 10px;
+}
+
+.project p {
+  margin: 10px;
+  text-align: justify;
+  line-height: 1.6;
+}
+
+.fourthBlock {
+  grid-area: fourthBlock;
+  display: flex;
+
+  background-color: var(--royalBlue);
+  border-radius: var(--main-radius);
+  padding: var(--main-padding);
+}
+
+.fourth {
+  display: flex;
+  text-align: center;
+  margin-top: 10px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--navy);
+}
+
+#education {
+  text-align: center;
+  margin-top: 10px;
+  flex: 1;
+  background-color: var(--steelBlue);
+  color: var(--navy);
+  border: 2px solid var(--navy);
+  border-radius: var(--main-radius);
+  padding: 10px;
+  margin: 10px;
+}
+
+#certificates {
+  text-align: center;
+  margin-top: 10px;
+  flex: 1;
+  background-color: var(--steelBlue);
+  color: var(--navy);
+  border: 2px solid var(--navy);
+  border-radius: var(--main-radius);
+  padding: 10px;
+  margin: 10px;
+}
+
+.fourth ul {
+  display: inline-block;
+  text-align: left;
+}
+
+footer {
+  grid-area: footer;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+
+  background-color: var(--royalBlue);
+  border-radius: var(--main-radius);
+  padding: var(--main-padding);
+}
+
+footer img {
+  display: block;
+  width: 40px;
+  margin: 10px;
+}
+
+#imageLeft {
+  margin-right: auto;
+}
+
+#imageRight {
+  margin-left: auto;
+}
+
+.menuBtn {
+  display: none;
+  margin-left: auto;
+  margin-right: 10px;
+  font-size: 1.5rem;
+  color: var(--iceBlue);
+  background-color: var(--darkNavy);
+  border: none;
+  border-radius: var(--main-radius);
+  padding: 5px 12px;
+  cursor: pointer;
+}
+
+@media (max-width: 500px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 1fr 1fr 1fr 1fr 0.2fr;
+
+    grid-template-areas:
+      "nav"
+      "firstBlock"
+      "secondBlock"
+      "thirdBlock"
+      "fourthBlock"
+      "footer";
+  }
+
+  nav {
+    /* lets items to drop down using wrap */
+    flex-wrap: wrap; 
+  }
+
+  .menuBtn {
+    display: block;
+  }
+
+  .navLinks {
+    display: none; /* hides the links */
+    flex-direction: column; /* stacks the links vertically instead side by side */
+    flex-basis: 100%; /* takes up the full space, no empty space */
+    gap: 10px;
+    margin: 10px;
+  }
+
+  .navLinks.open {
+    display: flex;
+  }
+
+  .navLinks a {
+    text-align: center;
+  }
+
+  .first {
+    display: block;
+  }
+
+  .first p {
+    text-align: left;
+  }
+
+  .first img {
+    width: 80%;
+  }
+
+  .second {
+    display: block;
+  }
+
+  #experiences {
+    display: block;
+  }
+
+  .experience {
+    margin-bottom: 70px;
+  }
+
+  #projects {
+    display: block;
+  }
+
+  .project {
+    margin-top: 30px;
+  }
+
+  .fourth {
+    display: block;
+    align-items: center;
+  }
+
+  #education {
+    border-right: none;
+    border-bottom: 2px solid var(--iceBlue);
+  }
+}
